@@ -1,6 +1,7 @@
 package com.pitrsen.meetyoursportmate.service;
 
-import com.pitrsen.meetyoursportmate.entity.Sport;
+import com.pitrsen.meetyoursportmate.entity.City;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -8,11 +9,11 @@ import java.util.List;
  * Created by IntelliJ IDEA.
  * User: peterSenaj
  * Date: 16.4.2022
- * Time: 8:33
+ * Time: 22:36
  * Project: meetyoursportmate
  */
-public interface SportService {
+public interface CityService {
 
-    List<Sport> findAll();
+    List<City> findAll();
 
 }
