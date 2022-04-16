@@ -12,11 +12,9 @@ import java.util.List;
  * Project: meetyoursportmate
  */
 public interface SportService {
-
-    // save operation
+    
     Sport save(Sport sport);
 
-    // read operation
     List<Sport> findAll();
 
 }
