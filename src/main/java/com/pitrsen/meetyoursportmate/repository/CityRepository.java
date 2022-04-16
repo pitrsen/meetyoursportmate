@@ -1,6 +1,6 @@
-package com.pitrsen.meetyoursportmate.respository;
+package com.pitrsen.meetyoursportmate.repository;
 
-import com.pitrsen.meetyoursportmate.entity.Sport;
+import com.pitrsen.meetyoursportmate.entity.City;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -8,11 +8,9 @@ import org.springframework.stereotype.Repository;
  * Created by IntelliJ IDEA.
  * User: peterSenaj
  * Date: 16.4.2022
- * Time: 8:26
+ * Time: 22:34
  * Project: meetyoursportmate
  */
 @Repository
-public interface SportRepository extends CrudRepository<Sport, Long> {
-
-
+public interface CityRepository extends CrudRepository<City, Long> {
 }

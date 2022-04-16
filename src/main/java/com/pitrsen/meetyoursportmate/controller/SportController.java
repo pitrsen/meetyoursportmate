@@ -1,7 +1,6 @@
 package com.pitrsen.meetyoursportmate.controller;
 
 import com.pitrsen.meetyoursportmate.entity.Sport;
-import com.pitrsen.meetyoursportmate.respository.SportRepository;
 import com.pitrsen.meetyoursportmate.service.SportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

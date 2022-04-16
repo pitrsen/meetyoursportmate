@@ -1,7 +1,7 @@
 package com.pitrsen.meetyoursportmate.service;
 
 import com.pitrsen.meetyoursportmate.entity.Sport;
-import com.pitrsen.meetyoursportmate.respository.SportRepository;
+import com.pitrsen.meetyoursportmate.repository.SportRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
