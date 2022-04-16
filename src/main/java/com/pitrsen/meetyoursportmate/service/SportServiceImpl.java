@@ -18,7 +18,7 @@ import java.util.List;
 public class SportServiceImpl implements SportService {
 
     @Autowired
-    SportRepository sportRepository;
+    private SportRepository sportRepository;
 
     @Override
     public Sport save(Sport sport) {
