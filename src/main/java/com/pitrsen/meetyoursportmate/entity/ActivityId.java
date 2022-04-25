@@ -1,5 +1,8 @@
 package com.pitrsen.meetyoursportmate.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
@@ -11,6 +14,8 @@ import javax.persistence.Embeddable;
  * Project: meetyoursportmate
  */
 @Embeddable
+@Getter
+@Setter
 public class ActivityId {
 
     @Column(name = "user_id")
