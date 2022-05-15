@@ -5,6 +5,7 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
+import java.io.Serializable;
 
 /**
  * Created by IntelliJ IDEA.
@@ -16,10 +17,10 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Getter
 @Setter
-public class ActivityId {
+public class  ActivityId implements Serializable {
 
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "mate_id")
+    private Long mateId;
 
     @Column(name = "sport_id")
     private Long sportId;

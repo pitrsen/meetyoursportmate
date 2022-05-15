@@ -37,7 +37,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .cors(withDefaults())
-                .antMatcher("/api/**");
+                .antMatcher("/api/**")
+                .csrf().disable();
 //                .httpBasic(withDefaults());
     }
 

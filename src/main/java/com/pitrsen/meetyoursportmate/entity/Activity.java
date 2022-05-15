@@ -4,6 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.time.LocalDateTime;
 
 /**
  * Created by IntelliJ IDEA.
@@ -15,24 +16,33 @@ import javax.persistence.*;
 @Entity
 @Getter
 @Setter
+@NamedQueries({
+        @NamedQuery(name = "Activity.findByMateId", query = "SELECT a FROM Activity a WHERE a.id.mateId = :mateId")
+})
 public class Activity {
 
+    public final static String FIND_BY_MATE_ID = "Activity.findByMateId";
+
     @EmbeddedId
-    public ActivityId id;
+    private ActivityId id;
 
     @ManyToOne
-    @MapsId("userId")
-    @JoinColumn(name = "user_id")
-    public User user;
-
-    @ManyToOne
-    @MapsId("cityId")
-    @JoinColumn(name = "city_id")
-    public City city;
+    @MapsId("mateId")
+    @JoinColumn(name = "mate_id")
+    private Mate mate;
 
     @ManyToOne
     @MapsId("sportId")
     @JoinColumn(name = "sport_id")
-    public Sport sport;
+    private Sport sport;
+
+    @ManyToOne
+    @MapsId("cityId")
+    @JoinColumn(name = "city_id")
+    private City city;
+
+    private LocalDateTime dateTimeFrom;
+
+    private LocalDateTime dateTimeTo;
 
 }

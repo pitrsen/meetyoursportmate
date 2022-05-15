@@ -14,5 +14,4 @@ import java.util.List;
 public interface ActivityService {
 
     void saveAll(List<Activity> activities);
-
 }
