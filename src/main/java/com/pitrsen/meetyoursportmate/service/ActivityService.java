@@ -14,4 +14,6 @@ import java.util.List;
 public interface ActivityService {
 
     void saveAll(List<Activity> activities);
+
+    List<Activity> getByMate(Long id);
 }

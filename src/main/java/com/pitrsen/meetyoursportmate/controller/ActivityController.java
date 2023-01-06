@@ -1,6 +1,7 @@
 package com.pitrsen.meetyoursportmate.controller;
 
 import com.pitrsen.meetyoursportmate.dto.ActivityDto;
+import com.pitrsen.meetyoursportmate.entity.Activity;
 import com.pitrsen.meetyoursportmate.mapper.ActivityMapper;
 import com.pitrsen.meetyoursportmate.service.ActivityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,12 @@ public class ActivityController {
     @PostMapping("/activities")
     public void saveAll(@RequestBody List<ActivityDto> activityDtos) {
         activityService.saveAll(ActivityMapper.INSTANCE.map(activityDtos));
+    }
+
+    @GetMapping("/activities/mate/{id}")
+    @ResponseBody
+    public List<Activity> getActivitiesByMate(@PathVariable Long id) {
+        return activityService.getByMate(id);
     }
 
 }

@@ -1,9 +1,11 @@
 package com.pitrsen.meetyoursportmate.repository;
 
 import com.pitrsen.meetyoursportmate.entity.Activity;
-import com.pitrsen.meetyoursportmate.entity.ActivityId;
+import com.pitrsen.meetyoursportmate.entity.ActivityKey;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
@@ -13,5 +15,7 @@ import org.springframework.stereotype.Repository;
  * Project: meetyoursportmate
  */
 @Repository
-public interface ActivityRepository extends CrudRepository<Activity, ActivityId> {
+public interface ActivityRepository extends CrudRepository<Activity, ActivityKey> {
+
+    List<Activity> getByActivityKeyMateId(Long id);
 }

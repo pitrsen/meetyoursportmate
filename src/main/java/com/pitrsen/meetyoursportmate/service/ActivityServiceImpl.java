@@ -25,4 +25,8 @@ public class ActivityServiceImpl implements ActivityService {
         activityRepository.saveAll(activities);
     }
 
+    @Override
+    public List<Activity> getByMate(Long id) {
+        return activityRepository.getByActivityKeyMateId(id);
+    }
 }

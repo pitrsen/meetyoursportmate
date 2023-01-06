@@ -1,6 +1,6 @@
 package com.pitrsen.meetyoursportmate.dto;
 
-import com.pitrsen.meetyoursportmate.entity.ActivityId;
+import com.pitrsen.meetyoursportmate.entity.ActivityKey;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @Setter
 public class ActivityDto {
 
-    private ActivityId id;
+    private ActivityKey activityKey;
 
     private MateDto mate;
 

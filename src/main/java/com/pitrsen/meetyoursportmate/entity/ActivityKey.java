@@ -17,7 +17,7 @@ import java.io.Serializable;
 @Embeddable
 @Getter
 @Setter
-public class  ActivityId implements Serializable {
+public class ActivityKey implements Serializable {
 
     @Column(name = "mate_id")
     private Long mateId;
